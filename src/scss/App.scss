@@ -1,0 +1,176 @@
+@import url('normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #F4F8FF;
+	font-family: 'Roboto', sans-serif;
+}
+.app {
+	max-width: 1100px;
+	margin: 0 auto;
+	&__controls {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		padding: 15px 0;
+		.btn {
+			margin-right: 10px;
+		}
+		.btn:last-child {
+			margin-right: 0;
+		}
+	}
+	.btn {
+		padding: 7px 10px;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		font-weight: 500;
+		background-color: rgb(228, 228, 228);
+	}
+	.btn-primary {
+		background-color: #0097D7;
+		color: #fff;
+		font-weight: 500;
+	}
+	&__title {
+		font-size: 20px;
+		color: #546D96;
+		font-weight: 700;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		min-height: 700px;
+	}
+	&__column {
+		&:first-child {
+			width: 800px;
+		}
+		&:last-child {
+			background-color: #EFEFEF;
+			width: 400px;
+		}
+	}
+	.app-gateway {
+		.head {
+			background-color: #0097D7;
+			padding: 7px 0 7px 10px;
+			color: #fff;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+		&__body {
+			padding: 10px 20px 0 0;
+		}
+		/* Remove margins and padding from the parent ul */
+		.tree-list {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			
+			/* Style the caret/arrow */
+			.caret {
+				cursor: pointer;
+				user-select: none; /* Prevent text selection */
+			}
+			/* Create the caret/arrow with a unicode, and style it */
+			.caret::before {
+				content: "\25B6";
+				color: black;
+				display: inline-block;
+				margin-right: 6px;
+			}
+			/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+			.caret-down::before {
+				transform: rotate(90deg);
+			}
+			/* Hide the nested list */
+			.nested {
+				display: none;
+				margin-left: 20px;
+				margin-bottom: 10px;
+				li {
+					margin-bottom: 0px;
+				}
+			}
+			/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+			.active {
+				display: block;
+			}
+		}
+	}
+	.gateway-info {
+		position: relative;
+		&__container {
+			max-width: 340px;
+			margin: 0 auto;
+		}
+		&__top {
+			border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 10px;
+			padding: 17px 0;
+		}
+		&__controls {
+			display: flex;
+		}
+		.top-container {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__prev {
+			width: 35px;
+			height: 30px;
+			border: 1px solid #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		&__next {
+			width: 35px;
+			height: 30px;
+			border: 1px solid #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		.gateway-form {
+			margin-bottom: 30px;
+			&__field {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 7px;
+			}
+			&__label {
+				display: inline-block;
+			}
+			&__input {
+				padding-left: 10px;
+				border: 1px solid #ccc;
+				border-radius: 3px;		
+				font-size: 16px;
+				height: 35px;
+				outline: 0;
+			}
+		}
+		&__bottom {
+			position: absolute;
+			top: 650px;
+			right: 5%;
+			.form-control {
+				&__save {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+ }
