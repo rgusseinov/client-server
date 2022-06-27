@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+// eslint-disable-next-line no-undef
 module.exports = {
   env: {
     browser: true,
@@ -24,6 +25,7 @@ module.exports = {
     semi: ['error', 'always'],
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
-    indent: 'off'
+    indent: 'off',
+    'prettier/prettier': 0
   }
 };
